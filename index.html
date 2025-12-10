@@ -282,18 +282,162 @@
             margin-bottom: 8px;
         }
 
-        @media (max-width: 768px) {
-            .input-section,
+        .disclaimer {
+            border: 3px solid #ffc107;
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+        }
+
+        .disclaimer h2 {
+            color: #f57c00;
+            border-bottom-color: #ffc107;
+        }
+
+        .disclaimer p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @media (max-width: 1024px) {
             .results-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 0;
             }
 
             .header h1 {
                 font-size: 1.8em;
+                margin-bottom: 8px;
+            }
+
+            .header p {
+                font-size: 0.95em;
+            }
+
+            .card {
+                padding: 15px;
+                margin-bottom: 15px;
+                border-radius: 10px;
+            }
+
+            .card h2 {
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+            .input-section {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
 
             .button-group {
                 flex-direction: column;
+                gap: 10px;
+            }
+
+            button {
+                padding: 12px 20px;
+                font-size: 0.95em;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .chart-container {
+                height: 250px;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 8px 6px;
+            }
+
+            .trend-summary {
+                padding: 15px;
+                font-size: 1em;
+            }
+
+            .visualizer {
+                padding: 15px;
+            }
+
+            .visualizer-step {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            .stack-visual {
+                flex-wrap: wrap;
+            }
+
+            .stack-item {
+                padding: 6px 10px;
+                font-size: 0.85em;
+            }
+
+            .info-box {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+
+            .disclaimer p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header p {
+                font-size: 0.85em;
+            }
+
+            .card {
+                padding: 12px;
+            }
+
+            .card h2 {
+                font-size: 1.1em;
+            }
+
+            table {
+                font-size: 0.8em;
+            }
+
+            th, td {
+                padding: 6px 4px;
+            }
+
+            .chart-container {
+                height: 200px;
+            }
+
+            .trend-summary {
+                font-size: 0.9em;
+                padding: 12px;
+            }
+
+            .visualizer-step {
+                font-size: 0.85em;
+            }
+
+            .stack-item {
+                font-size: 0.8em;
+                padding: 5px 8px;
             }
         }
 
@@ -307,6 +451,17 @@
         <div class="header">
             <h1>📈 Stock Price Jump Predictor</h1>
             <p>Analyze stock price trends using Next Greater Element (NGE) Algorithm</p>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="card disclaimer">
+            <h2>⚠️ Important Disclaimer</h2>
+            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px;">
+                <p style="margin-bottom: 10px;"><strong>Educational Purpose Only:</strong> This tool is designed for educational and algorithmic learning purposes to demonstrate the Next Greater Element (NGE) data structure concept.</p>
+                <p style="margin-bottom: 10px;"><strong>Not Financial Advice:</strong> This application does NOT provide financial, investment, or trading advice. The predictions and analyses shown are based purely on a simple algorithm and do not account for market fundamentals, technical indicators, news, or other critical factors that influence stock prices.</p>
+                <p style="margin-bottom: 10px;"><strong>No Guarantee of Accuracy:</strong> Past price patterns do not guarantee future results. Stock markets are inherently unpredictable and involve substantial risk.</p>
+                <p style="margin-bottom: 0;"><strong>Consult Professionals:</strong> Always consult with licensed financial advisors, brokers, or professionals before making any investment decisions. The creators of this tool assume no liability for any financial losses incurred from its use.</p>
+            </div>
         </div>
 
         <!-- Input Section -->
@@ -363,8 +518,8 @@
                                 <tr>
                                     <th>Day</th>
                                     <th>Price</th>
-                                    <th>Next Jump Price</th>
-                                    <th>Days Until Jump</th>
+                                    <th>Next Jump</th>
+                                    <th>Days</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
